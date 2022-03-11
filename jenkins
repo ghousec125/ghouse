@@ -2,12 +2,12 @@ pipeline{
   agent any
    stages{
      stage ("clone"){
-       step{
+       steps{
       git 'https://github.com/ghousec125/ghouse.git'
       }
       }
-      stage{
-        step("build"){
+      stage("build"){
+        steps{
           bat 'mvn package'
           }
           }
