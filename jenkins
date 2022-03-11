@@ -1,17 +1,17 @@
 pipeline {
  agent any
     stages{
-      Stage("clone"){
+      stage("clone"){
          step{
            git 'https://github.com/ghousec125/game-of-life.git'
      }
         }
-    Stage("bulid"){
+    tage("bulid"){
          step{
           bat 'mvn compile'
     }
        }
-    Stage("jafrog"){
+    stage("jafrog"){
         step{
           //artifactory backup stage
      }
