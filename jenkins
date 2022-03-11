@@ -1,0 +1,23 @@
+pipeline {
+ agent any
+    stages{
+      Stage("clone"){
+         step{
+           git 'https://github.com/ghousec125/game-of-life.git'
+     }
+        }
+    Stage("bulid"){
+         step{
+          bat 'mvn compile'
+    }
+       }
+    Stage("jafrog"){
+        step{
+          //artifactory backup stage
+     }
+      }
+      } //stages
+      } //pipeline
+
+
+
