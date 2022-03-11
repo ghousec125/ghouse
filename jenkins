@@ -1,8 +1,19 @@
-pipeline {
+pipeline{
   agent any
-   stages {
-     stage {
-      git 
+   stages{
+     stage ("clone"){
+       step{
+      git 'https://github.com/ghousec125/ghouse.git'
+      }
+      }
+      stage{
+        step("build"){
+          bat 'mvn package'
+          }
+          }
+   } //stages
+   } //pipeline
+      
 
 
 
